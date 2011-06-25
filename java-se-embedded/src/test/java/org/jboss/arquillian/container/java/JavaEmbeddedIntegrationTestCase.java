@@ -52,9 +52,10 @@ public class JavaEmbeddedIntegrationTestCase
       Assert.assertEquals("lincoln", instance.getName());
    }
 
-   @Test
+   @Test(expected = NoClassDefFoundError.class)
    public void shouldNotBeAbltToReferenceBean() throws Exception
    {
-      MyExcludedBean instance = new MyExcludedBean();
+      new MyExcludedBean();
+      Assert.fail();
    }
 }
