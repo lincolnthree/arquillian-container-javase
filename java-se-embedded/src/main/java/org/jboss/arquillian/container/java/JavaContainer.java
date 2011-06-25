@@ -32,6 +32,7 @@ import org.jboss.shrinkwrap.descriptor.api.Descriptor;
  * WeldSEContainer
  * 
  * @author <a href="mailto:aslak@conduct.no">Aslak Knutsen</a>
+ * @author <a href="mailto:lincolnbaxter@gmail.com">Lincoln Baxter, III</a>
  * @version $Revision: $
  */
 public class JavaContainer implements DeployableContainer<JavaConfiguration>

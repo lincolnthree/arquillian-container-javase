@@ -19,6 +19,7 @@ package org.jboss.arquillian.container.java;
 import junit.framework.Assert;
 
 import org.jboss.arquillian.container.java.test.MyBean;
+import org.jboss.arquillian.container.java.test.MyExcludedBean;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
@@ -49,5 +50,11 @@ public class JavaEmbeddedIntegrationTestCase
    {
       MyBean instance = new MyBean();
       Assert.assertEquals("lincoln", instance.getName());
+   }
+
+   @Test
+   public void shouldNotBeAbltToReferenceBean() throws Exception
+   {
+      MyExcludedBean instance = new MyExcludedBean();
    }
 }
